@@ -1,0 +1,31 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+  .header
+    .container
+      .logo
+        img(src="images/logo.svg")
+        .live
+          .live-dot
+          span En Vivo
+      .social
+        a(href="#")
+          img.logo(src="images/facebook.svg")
+        a(href="#")
+          img.logo(src="images/instagram.svg")
+        a(href="#")
+          img.logo(src="images/youtube.svg")
+        a(href="#")
+          img.logo(src="images/twitter.svg")
+          
+  .container
+    .center 
+      h1 Somos WappTV
+      p 
+        | El Primer Canal con 
+        span.h Perspectiva de Género 
+        | en Chile
+    .player
+      iframe(src='//mdstrm.com/live-stream/5fd13a8fc5a458587d59f867?sharing=true&type=dvr', width='960', height='540', allow='autoplay; fullscreen; encrypted-media', frameborder='0', allowfullscreen, allowscriptaccess='always', scrolling='no')

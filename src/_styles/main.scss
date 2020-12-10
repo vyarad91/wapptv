@@ -1,0 +1,166 @@
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+
+// Import Modules
+@import '../_modules/link/link';
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Styling on warning for users on IE7 or below
+.browsehappy {
+  text-align: center;
+  margin: 0;
+  background: #fff8e2;
+  color: #000;
+  padding: 0.5em 0;
+}
+
+body {
+  background-color: #080A0C;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.header {
+  background: #101418;
+  .container {
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    .logo {
+      flex: auto;
+      display: flex;
+      img {
+        margin: 12px;
+        height: 36px;
+        width: auto;
+      }
+      .live {
+        display: flex;
+        margin-left: 0px;
+        .live-dot {
+          flex: auto;
+          align-self: center;
+          width: 8px;
+          height: 8px;
+          background-color: #52CEFB;
+          border-radius: 4px;
+          margin: 2px;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+        	margin: 3px 12px;
+        	transform: scale(1);
+        	animation: pulse-white 2s infinite;
+        }
+        span {
+          align-self: center;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      a {
+        padding: 12px;
+        align-self: center;
+        &:hover {
+          img {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
+
+.center {
+  text-align: center;
+  margin: 36px 0;
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 24px;
+  }
+  span.h {
+    color: #41EDC7;
+    font-weight: 600;
+  }
+}
+.container {
+  max-width: 960px;
+  .center {
+    padding: 0 12px;
+  }
+  .player {
+    text-align: center;
+    position: relative;
+    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    height: 0;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 960px;
+      height: 100%;
+      max-height: 540px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    .live {
+      display: none !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header {
+    .social {
+      a {
+        padding: 9px !important;
+      }
+    }
+  }
+}
+
+@keyframes pulse-white {
+	0% {
+		transform: scale(0.9);
+		box-shadow: 0 0 0 0 rgba(82, 206, 251, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(82, 206, 251, 0);
+	}
+
+	100% {
+		transform: scale(0.9);
+		box-shadow: 0 0 0 0 rgba(82, 206, 251, 0);
+	}
+}

@@ -1,0 +1,44 @@
+//- Custom Configuration
+block config
+  //- Setup site's base URL to match the "baseUrl" key within `package.json`
+  //- Otherwise default to relative pathing
+  - var baseUrl = config.baseUrl || './'
+
+doctype html
+<html class='no-js' lang='es'>
+
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  title WappTV
+  meta(name='description', content= 'El primer canal con perspectiva de género en Chile')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  //- Facebook Meta Tags
+  meta(property="og:title", content="Somos WappTV")
+  meta(property="og:description",content="El primer canal con perspectiva de género en Chile")
+  meta(property="og:image", content="/images/social-media.png")
+  meta(property="og:url", content="https://www.wapptv.cl/")
+  meta(property="og:site_name", content="Wapp Media")
+  //- Twitter Meta Tags
+  meta(name="twitter:title", content="Somos WappTV")
+  meta(name="twitter:description", content="El primer canal con perspectiva de género en Chile")
+  meta(name="twitter:image", content="/images/social-media.png")
+  meta(name="twitter:card", content="summary_large_image")
+  
+  link(rel='icon', type='image/x-icon', href='/favicon.ico')
+  link(rel='preconnect', href='https://fonts.gstatic.com') 
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap', rel='stylesheet')
+  block stylesheets
+    link(rel='stylesheet', href= baseUrl + 'styles/main.css')
+
+body
+  <!--[if lt IE 11]>
+  <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  block content
+
+  block scripts
+    script(src= baseUrl + 'scripts/main.js')
+
+</html>
