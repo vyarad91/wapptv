@@ -1,31 +1,35 @@
 extends _layouts/base
-
-include _modules/link/link
-
 block content
-  .header
-    .container
-      .logo
-        img(src="images/logo.svg")
-        .live
-          .live-dot
-          span En Vivo
-      .social
-        a(href="#")
-          img.logo(src="images/facebook.svg")
-        a(href="#")
-          img.logo(src="images/instagram.svg")
-        a(href="#")
-          img.logo(src="images/youtube.svg")
-        a(href="#")
-          img.logo(src="images/twitter.svg")
+  include _modules/navbar/navbar
           
   .container
     .center 
+      //- .player
+      //- iframe(src='//mdstrm.com/live-stream/5fd13a8fc5a458587d59f867?sharing=true&type=dvr', width='960', height='540', allow='autoplay; fullscreen; encrypted-media', frameborder='0', allowfullscreen, allowscriptaccess='always', scrolling='no')
+      img.icon(src="images/icon.svg")
       h1 Somos WappTV
       p 
-        | El Primer Canal con 
+        | El Primer Canal de TV con 
         span.h Perspectiva de Género 
-        | en Chile
-    .player
-      iframe(src='//mdstrm.com/live-stream/5fd13a8fc5a458587d59f867?sharing=true&type=dvr', width='960', height='540', allow='autoplay; fullscreen; encrypted-media', frameborder='0', allowfullscreen, allowscriptaccess='always', scrolling='no')
+        | y 
+        span.h Colaborativo 
+        | en Chile. 
+        br 
+        | Síguenos en Nuestras Redes Sociales
+      .social
+        a.btn(href="https://www.facebook.com/wapptv.cl/")
+          img.logo(src="images/facebook.svg")
+          | Facebook
+        a.btn(href="https://www.instagram.com/wapptv.cl/")
+          img.logo(src="images/instagram.svg")
+          | Instagram
+        a.btn(href="https://www.youtube.com/channel/UCgylg1Pa7i56wLwn6sA74HA")
+          img.logo(src="images/youtube.svg")
+          | YouTube  
+        a.btn(href="https://twitter.com/wapptv")
+          img.logo(src="images/twitter.svg")
+          | Twitter
+      p 
+        | Escríbenos a 
+        a(href="mailto:contacto@wapptv.cl") contacto@wapptv.cl
+  

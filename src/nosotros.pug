@@ -1,0 +1,120 @@
+extends _layouts/base
+block content
+  include _modules/navbar/navbar
+  
+  .wide-bg.featured
+    .container
+      .center
+        .player 
+          iframe(src='//mdstrm.com/embed/600ed84e86218a08867fd99a?autoplay=true', width='960', height='540', allow='autoplay; fullscreen; encrypted-media', frameborder='0', allowfullscreen, allowscriptaccess='always', scrolling='no')
+  .container.featured
+    
+    .center
+      h1 
+        | Nace un nuevo medio 
+        span.h interactivo, multiplataforma 
+        | y con huella de mujer
+        
+      h2 Somos el primer canal de TV con perspectiva de género y colaborativo en Chile.
+  .container
+    .row
+      .col-4
+        img.icon(src="images/equality.svg")
+        h3 Perspectiva de Género
+        p Formatos centrados en la perspectiva de género con un sello participativo, tolerante, diverso y sustentable.
+      .col-4
+        img.icon(src="images/colaborative.svg")
+        h3 Colaborativo
+        p Desarrollo de contenidos colaborativo a través de alianzas focalizadas en la diversidad e inclusión social.
+      .col-4
+        img.icon(src="images/interactive.svg")
+        h3 Interactivo
+        p A través de formatos innovadores de desarrollo de contenidos tradicionales y en plataformas digitales.
+
+  .wide-bg.secondary
+    .container
+      .row
+        span.h Nuestro Sello
+        h4 Porque la TV tradicional no muestra toda la diversidad de nuestra realidad
+        p Nuestro propósito es contribuir a un cambio cultural que nos permita tener una sociedad más
+        .col-3
+          img.icon(src="images/inclusive.svg")
+          h5 Inclusiva
+        .col-3
+          img.icon(src="images/kind.svg")
+          h5 Amable
+        .col-3
+          img.icon(src="images/participative.svg")
+          h5 Participativa
+        .col-3
+          img.icon(src="images/agile.svg")
+          h5 Flexible
+      .row
+        .center
+          p Conectamos a creadores, marcas y comunidades para crear juntos entretención, actualidad y cultura, con una mirada amable, honesta y cercana a las personas.
+          a.btn(href="mailto:contacto@wapptv.cl")
+            | ¡Hablemos!
+  
+  .container
+    .shows
+      .head
+        img.icon(src="images/icon.svg")
+        h4 ¡Bienvenid@ a nuestra comunidad Wapp!
+        p Somos el primer grupo multimedia Chileno con Perspectiva de Género en la televisión abierta y plataformas digitales
+        p Descubre nuestro contenido original en el Canal 21 de la señal de TV Digital y Plataformas Digitales
+      .row
+        .col-3
+          .show-box
+            img.tv-show(src="images/tu-opinas.png")
+            span.h2 Actualidad
+            h5 Tu Opinas
+            p Capsulas de opinión donde diversos líderes de opinión hablar sobre diversos temas de nuestra sociedad.
+
+        .col-3
+          .show-box
+            img.tv-show(src="images/cuestionario.png")
+            span.h2 Entrevista
+            h5 Cuestionario
+            p Una serie de preguntas a destacadas personalidades mientras se desplazan por la ciudad.
+
+        .col-3
+          .show-box
+            img.tv-show(src="images/agentes-cambio.png")
+            span.h2 Entrevista
+            h5 Agentes de Cambio
+            p Programa de entrevista a mujeres y hombres que trabajan para mejorar la sociedad en distintas áreas.
+
+        .col-3
+          .show-box
+            img.tv-show(src="images/inspiradas.png")
+            span.h2 Documental
+            h5 Inspiradas
+            p Niñas conocen a mujeres módelos de rol y cumplen el sueño de conocerlas y también visitar el entorno en el que desempeñan su profesión.
+      .row
+        .col-3
+          .show-box
+            img.tv-show(src="images/cazadora-emprendedores.png")
+            span.h2 PYME
+            h5 Cazadora de Emprendedores
+            p Suiling Chau conoce distintos emprendedores que han sorteado de manera positiva las dificultades que se viven en tiempos de COVID-19.
+
+        .col-3
+          .show-box
+            img.tv-show(src="images/craft-box.png")
+            span.h2 Wellness
+            h5 Craft Box
+            p Dos amantes de las artes nos enseñan manualidades que cualquiera puede realizar.
+
+        .col-3
+          .show-box
+            img.tv-show(src="images/n30.png")
+            span.h2 Actualidad
+            h5 N30
+            p Noticiero diario y entrevistas a líderes de opinión y autoridades .
+
+        .col-3
+          .show-box
+            img.tv-show(src="images/cambio-habito.png")
+            span.h2 Wellness
+            h5 Cambio de Hábito
+            p Conocemos como vivir de una manera sana y  conocemos mujeres que se han dedicado a una disciplina deportiva cambiando su vida radicalmente. 
